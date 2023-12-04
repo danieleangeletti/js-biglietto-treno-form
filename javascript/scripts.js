@@ -12,10 +12,14 @@ my_button.addEventListener('click', function() {
 
     price = kilometres_input_value * 0.21;
 
-    if (age_range_value = "minorenne") {
+    if (age_range_value == "minorenne") {
         price = price * 0.8;
     }
-
+    
+    else if (age_range_value == 'over-65') {
+        price = price * 0.6;
+    }
+ 
     document.getElementById("passenger-name").innerHTML += name_and_surname_value;
     document.getElementById("ticket-price").innerHTML += price + "€";
 })
