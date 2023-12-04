@@ -5,3 +5,11 @@ body {
 form {
     border-radius: 8px;
 }
+
+table tbody {
+    border-style: hidden;
+}
+
+table tbody tr th:first-child {
+    background-color: #808080;
+}
