@@ -25,7 +25,7 @@
                                 Name and surname
                             </label>
 
-                            <input id="name" name="name" type="text">
+                            <input id="name" class="form-control" name="name" type="text">
                         </div>
 
                         <div class="col-3 d-flex flex-column">
@@ -33,7 +33,7 @@
                                 Kilometres
                             </label>
 
-                            <input id="kilometres" name="kilometres" type="text">
+                            <input id="kilometres" class="form-control" name="kilometres" type="text">
                         </div>
 
                         <div class="col-3 d-flex flex-column">
@@ -41,52 +41,55 @@
                                 Age range
                             </label>
 
-                            <select class="h-100" id="range" name="range">
-                                <option value="minorenne">Minorenne</option>
-                                <option value="maggiorene">Maggiorenne</option>
-                                <option value="over-65">Maggiorenne over 65</option>
+                            <select id="range" class="h-100 form-select" name="range">
+                                <option value="underage">Underage</option>
+                                <option value="adult">Adult</option>
+                                <option value="adult-over-65">Adult over 65</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="row justify-content-center">
                         <div class="col-2 d-flex justify-content-end">
-                            <button type="button" id="calculation-button">
-                                Genera
+                            <button type="button" id="calculation-button" class="btn btn-success">
+                                Generate
                             </button>
                         </div>
 
                         <div class="col-2 d-flex justify-content-start">
-                            <button type="button" id="delete">
-                                Annulla
+                            <button type="reset" id="delete" class="btn btn-warning">
+                                Cancel
                             </button>
                         </div>
                     </div>
                 </form>
 
-                <h1 class="text-center text-white">
-                    IL TUO BIGLIETTO
-                </h1>
-
-                <p id="passenger-name">
-                    NOME PASSEGGERO:
-                </p>
-
-                <p id="offer">
-                    Offerta:
-                </p>
-
-                <p id="carriage">
-                    Carrozza:
-                </p>
-
-                <p id="CP-code">
-                    Codice CP:
-                </p>
-
-                <p id="ticket-price">
-                    Costo biglietto:
-                </p>
+                <div class="bg-white">
+                    <h2>
+                        PASSENGER DETAIL
+                    </h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">PASSENGER NAME</th>
+                                <th scope="col">Offer</th>
+                                <th scope="col">Carriage</th>
+                                <th scope="col">CP Code</th>
+                                <th scope="col">Ticket price</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr>
+                                <th id="passenger-name" scope="row"></th>
+                                <td id="offer">Biglietto standard</td>
+                                <td id="carriage"></td>
+                                <td id="cp-code"></td>
+                                <td id="ticket-price"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 

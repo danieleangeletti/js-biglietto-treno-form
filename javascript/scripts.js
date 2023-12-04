@@ -12,14 +12,24 @@ my_button.addEventListener('click', function() {
 
     price = kilometres_input_value * 0.21;
 
-    if (age_range_value == "minorenne") {
+    if (age_range_value == "underage") {
         price = price * 0.8;
     }
-    
-    else if (age_range_value == 'over-65') {
+
+    else if (age_range_value == 'adult-over-65') {
         price = price * 0.6;
     }
+
+    carriage_number = Math.round(Math.random() * 13);
+
+    function generate_random_int(min, max) {
+        return Math.floor((Math.random() * (max - min)) + min);
+    }
+
+    cp_code_number = generate_random_int(10000, 100000);
  
     document.getElementById("passenger-name").innerHTML += name_and_surname_value;
-    document.getElementById("ticket-price").innerHTML += price + "€";
+    document.getElementById("carriage").innerHTML += carriage_number;
+    document.getElementById("cp-code").innerHTML += cp_code_number;
+    document.getElementById("ticket-price").innerHTML += price.toFixed(2) + "€";
 })
