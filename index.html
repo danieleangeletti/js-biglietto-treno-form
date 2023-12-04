@@ -12,40 +12,82 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
+        <section>
+            <div class="container">
+                <h1 class="text-center text-white">
+                    CALCOLA IL PREZZO DEL TUO BIGLIETTO
+                </h1>
 
-        <div>
-            <label for="kilometres">
-                Kilometres
-            </label>
+                <form class="bg-white pb-5 mb-5">
+                    <div class="row justify-content-center pb-5">
+                        <div class="col-3 d-flex flex-column">
+                            <label for="name">
+                                Name and surname
+                            </label>
 
-            <input id="kilometres" name="kilometres" type="text" placeholder="Type the kilometers">
-        </div>
+                            <input id="name" name="name" type="text">
+                        </div>
 
-        <br>
+                        <div class="col-3 d-flex flex-column">
+                            <label for="kilometres">
+                                Kilometres
+                            </label>
 
-        <div>
-            <label for="age">
-                Age
-            </label>
+                            <input id="kilometres" name="kilometres" type="text">
+                        </div>
 
-            <input id="age" name="age" type="text" placeholder="Type your age">
-        </div>
+                        <div class="col-3 d-flex flex-column">
+                            <label for="range">
+                                Age range
+                            </label>
 
-        <br>
-        
-        <div>
-            <button type="button" id="calculation-button">
-                Calculate
-            </button>
-        </div>
+                            <select class="h-100" id="range" name="range">
+                                <option value="minorenne">Minorenne</option>
+                                <option value="maggiorene">Maggiorenne</option>
+                            </select>
+                        </div>
+                    </div>
 
-        <br>
+                    <div class="row justify-content-center">
+                        <div class="col-1">
+                            <button type="button" id="calculation-button">
+                                Genera
+                            </button>
+                        </div>
 
-        <div>
-            <p>
-                Il prezzo del biglietto è di:
-            </p>
-        </div>
+                        <div class="col-1">
+                            <button type="button" id="delete">
+                                Annulla
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <h1 class="text-center text-white">
+                    IL TUO BIGLIETTO
+                </h1>
+
+                <p id="passenger-name">
+                    NOME PASSEGGERO:
+                </p>
+
+                <p id="offer">
+                    Offerta:
+                </p>
+
+                <p id="carriage">
+                    Carrozza:
+                </p>
+
+                <p id="CP-code">
+                    Codice CP:
+                </p>
+
+                <p id="ticket-price">
+                    Costo biglietto:
+                </p>
+            </div>
+        </section>
 
        <script type="text/javascript" src="./javascript/scripts.js" ></script>
     </body>
